@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+const {server} = require('../app');
+const socket = require("../router/socket")
+
+const Server = server.listen(process.env.PORT || 3400, function() {
+    console.log('Express server listening on port ' + Server.address().port);
+});

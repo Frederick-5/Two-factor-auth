@@ -1,0 +1,231 @@
+@import url("fonts.css"); 
+@media (max-width:570px) {
+    body{
+        overflow: auto;
+    }
+    section.sec svg{
+        display: block;
+    }
+    section.sec:before{
+        display: none;
+    }
+    section.sec::after{
+        display: none;
+    }
+    div.bubble{
+        display: none;
+    }
+    section div.select{
+        max-width: 300px;
+    }
+    /*********************2FA MOBILE*********************/
+    section div.tfa-mobile{
+        box-shadow: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        background: transparent;
+        justify-content: center;
+        align-items: center;
+    }
+    div.tfa-mobile div.head{
+        position: absolute;
+        top: 50px;
+    }
+    div.tfa-mobile div.set{
+        margin-top: 100px;
+    }
+    div.tfa-mobile div.head h1{
+        color: #fff;
+    }
+    div.tfa-mobile div.head p{
+        width: 100%;
+        color: #fff;
+        font-size: 0.9rem;
+    }
+    div.tfa-mobile div.code p{
+        max-width: 250px;
+    }
+    div.tfa-mobile div.code p span:nth-child(1){
+        white-space: nowrap;
+    }
+    div.tfa-mobile div.code p #secret{
+        font-size: 0.9rem;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu',sans-serif;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section::before{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #a200ff;
+    top: -150px;
+    left: -150px;
+    border-radius: 50%;
+    z-index: -100;
+}
+section::after{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #3700ff;
+    bottom: -150px;
+    right: -150px;
+    border-radius: 50%;
+    z-index: -100;
+}
+.bubble{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #3700ff;
+    border-radius: 50%;
+    right: -100px;
+    bottom: 250px;
+    z-index: -100;
+}
+.bubble::after{
+    content: "";
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: #3700ff;
+    border-radius: 50%;
+    top: -70px;
+    right: 20px;
+}
+svg{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 570px;
+    height: 500px;
+    background: linear-gradient(#3700ff 40%, transparent 40%);
+    object-fit: cover;
+    z-index: -100;
+}
+.tfa-mobile{
+    display: flex;/*TO FLEX*/
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px #5555,
+                -1px -1px 15px #5555;
+}
+.tfa-mobile .head{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.tfa-mobile .head h1{
+    color: #a200ff;
+}
+.tfa-mobile .set{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.tfa-mobile .head p{
+    width: 400px;
+    text-align: center;
+    color: #a200ff;
+}
+.tfa-mobile .code{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.tfa-mobile .code p{
+    color: #2700b3;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    overflow: auto;
+    padding: 10px;
+    background: #eee;
+    border-radius: 10px;
+}
+.tfa-mobile .code p::-webkit-scrollbar{
+    height: 5px;
+}
+.tfa-mobile .code p::-webkit-scrollbar-thumb{
+    background: #3700ff;
+    border-radius: 3px;
+}
+.tfa-mobile .code img{
+    width: 250px;
+    height: 250px;
+    border: 1px solid #3700ff;
+}
+.tfa-mobile .sec{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.tfa-mobile .sec .field{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.tfa-mobile .sec .field label{
+    color: #2700b3;
+}
+.tfa-mobile .sec .field input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+    background: #eee;
+    border-radius: 10px;
+    transition: 0.5s;
+    color: #2700b3;
+    caret-color: #3700ff;
+    text-align: center;
+}
+.message{
+    font-size: 0.85rem;
+    position: relative;
+    color: #ff0000;
+    width: 100%;
+    white-space: wrap;
+    text-align: center;
+}
+#verify-mobile{
+    background: #3700ff;
+    color: #fff;
+    transition: 0.5s;
+}
+#verify-mobile:hover{
+    background: #2700b3;
+}

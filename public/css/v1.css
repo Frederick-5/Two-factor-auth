@@ -1,0 +1,197 @@
+@import url("fonts.css");
+@media (max-width:570px) {
+    body{
+        overflow: auto;
+    }
+    section.sec svg{
+        display: block;
+    }
+    section.sec:before{
+        display: none;
+    }
+    section.sec::after{
+        display: none;
+    }
+    div.bubble{
+        display: none;
+    }
+    section div.select{
+        max-width: 300px;
+    }
+    
+    /*******************VERIFICATION CODE********************/
+    section div.verify-email{
+        box-shadow: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        background: transparent;
+        justify-content: center;
+        align-items: center;
+    }
+    div.verify-email div.head{
+        transform: translateY(-30px);
+    }
+    div.verify-email div.head h1{
+        color: #fff;
+    }
+    div.verify-email div.head p{
+        width: 100%;
+        color: #fff;
+        font-size: 0.9rem;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu',sans-serif;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section::before{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #a200ff;
+    top: -150px;
+    left: -150px;
+    border-radius: 50%;
+    z-index: -100;
+}
+section::after{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #3700ff;
+    bottom: -150px;
+    right: -150px;
+    border-radius: 50%;
+    z-index: -100;
+}
+.bubble{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #3700ff;
+    border-radius: 50%;
+    right: -100px;
+    bottom: 250px;
+    z-index: -100;
+}
+.bubble::after{
+    content: "";
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: #3700ff;
+    border-radius: 50%;
+    top: -70px;
+    right: 20px;
+}
+svg{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 570px;
+    height: 500px;
+    background: linear-gradient(#3700ff 40%, transparent 40%);
+    object-fit: cover;
+    z-index: -100;
+}
+.verify-email{
+    display: flex;/*TO FLEX*/
+    flex-direction: column;
+    gap: 100px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px #5555,
+                -1px -1px 15px #5555;
+}
+.verify-email .head{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.verify-email .head h1{
+    color: #a200ff;
+}
+.verify-email .head p{
+    width: 400px;
+    text-align: center;
+    color: #a200ff;
+}
+.verify-email .sec{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.verify-email .sec .field{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.verify-email .sec .field input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+    background: #eee;
+    border-radius: 10px;
+    transition: 0.5s;
+    color: #2700b3;
+    caret-color: #3700ff;
+    text-align: center;
+}
+.verify-email .sec .field label{
+    color: #2700b3;
+}
+.message{
+    font-size: 0.85rem;
+    position: relative;
+    color: #ff0000;
+    width: 100%;
+    white-space: wrap;
+    text-align: center;
+}
+#verify-mail{
+    background: #3700ff;
+    color: #fff;
+}
+#verify-mail:hover{
+    background: #2700b3;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+footer span{
+    color: #2700b3;
+}
+footer a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #3700ff;
+}

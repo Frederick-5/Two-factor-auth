@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+    head 
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="theme-color", content="#3700ff")
+        title Create an account with Favcon
+        link(rel="icon", href="/img/icon.png", type="image/png")
+        link(rel="stylesheet", href="/css/signup.css")
+        script(src="/socket.io/socket.io.js")
+    body 
+        section.sec
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3700ff" fill-opacity="1" d="M0,160L48,165.3C96,171,192,181,288,160C384,139,480,85,576,90.7C672,96,768,160,864,202.7C960,245,1056,267,1152,277.3C1248,288,1344,288,1392,288L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+            div.bubble
+            div.container 
+                div.image 
+                    div.img 
+                        img(src="/img/img.png", alt="")
+                    h1 Favcon
+                    p Create an account with us to enjoy our easy and fast messaging
+                div.fill 
+                    div.head 
+                        div.logo 
+                            img(src="/img/img.png", alt="")
+                        h1 Signup
+                    form(action="/signup", method="post") 
+                        div.field 
+                            label(for="firstname") Fullname
+                            input(type="text", name="fullname", id="fullname", required, placeholder="Fullname") 
+                        div.field 
+                            label(for="username") Username
+                            input(type="text", name="username", id="username", required, placeholder="Username") 
+                        div.field 
+                            label(for="email") Email
+                            input(type="email", name="email", id="email", required, placeholder="Email") 
+                        div.field 
+                            label(for="password") Password
+                            input(type="password", name="password", id="password", required, placeholder="Password") 
+                            img(src="/img/view.png", alt="", id="view-pass")
+                        div.field#submit-field 
+                            div.message#warn= message
+                            div.inp-f
+                                input(type="submit", value="Create account", id="submit")
+                                div.loading#loading
+                                    div.load
+                    footer 
+                        span Already have an account?
+                        a(href="/login") Login
+        script(src="/js/signup.js") 

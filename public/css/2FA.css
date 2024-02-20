@@ -1,0 +1,379 @@
+@import url("fonts.css"); 
+@media (max-width:570px) {
+    body{
+        overflow: auto;
+    }
+    section.sec svg{
+        display: block;
+    }
+    section.sec:before{
+        display: none;
+    }
+    section.sec::after{
+        display: none;
+    }
+    div.bubble{
+        display: none;
+    }
+    section div.select{
+        max-width: 300px;
+    }
+    /***********************SELECT*********************/
+    section div.select{
+        box-shadow: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        background: transparent;
+        justify-content: center;
+        align-items: center;
+    }
+    div.select div.head{
+        margin-bottom: 30px;
+        gap: 30px;
+        transform: translateY(-20px);
+    }
+    div.select div.head h1{
+        color: #fff;
+    }
+    div.select div.head .mission{
+        color: #fff;
+        font-size: 0.9rem;
+    }
+    div.select div.choose{
+        padding: 0px;
+    }
+    div.select div.choose p{
+        font-size: 0.9rem;
+    }
+    /***********************EMAIL DETAILS*****************/
+    section div.email-details{
+        box-shadow: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        background: transparent;
+        justify-content: center;
+        align-items: center;
+    }
+    div.email-details div.head{
+        transform: translateY(-100px);
+    }
+    div.email-details div.head h1{
+        color: #fff;
+    }
+    div.email-details div.head p{
+        color: #fff;
+        font-size: 0.9rem;
+    }
+    /*******************VERIFICATION CODE********************/
+    section div.verify-email{
+        box-shadow: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        background: transparent;
+        justify-content: center;
+        align-items: center;
+    }
+    div.verify-email div.head{
+        transform: translateY(-30px);
+    }
+    div.verify-email div.head h1{
+        color: #fff;
+    }
+    div.verify-email div.head p{
+        width: 100%;
+        color: #fff;
+        font-size: 0.9rem;
+    }
+    /*********************2FA MOBILE*********************/
+    section div.tfa-mobile{
+        box-shadow: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        background: transparent;
+        justify-content: center;
+        align-items: center;
+    }
+    div.tfa-mobile div.head{
+        transform: translateY(-50px);
+    }
+    div.tfa-mobile div.head h1{
+        color: #fff;
+    }
+    div.tfa-mobile div.head p{
+        width: 100%;
+        color: #fff;
+        font-size: 0.9rem;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu',sans-serif;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section::before{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #a200ff;
+    top: -150px;
+    left: -150px;
+    border-radius: 50%;
+    z-index: -100;
+}
+section::after{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #3700ff;
+    bottom: -150px;
+    right: -150px;
+    border-radius: 50%;
+    z-index: -100;
+}
+.bubble{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #3700ff;
+    border-radius: 50%;
+    right: -100px;
+    bottom: 250px;
+    z-index: -100;
+}
+.bubble::after{
+    content: "";
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: #3700ff;
+    border-radius: 50%;
+    top: -70px;
+    right: 20px;
+}
+svg{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 570px;
+    height: 500px;
+    background: linear-gradient(#3700ff 40%, transparent 40%);
+    object-fit: cover;
+    z-index: -100;
+}
+/***********************SELECT*********************/
+.select{
+    display: flex;/*TO FLEX*/
+    flex-direction: column;
+    position: relative;
+    max-width: 500px;
+    padding: 20px;
+    gap: 50px;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px #5555,
+                -1px -1px 15px #5555;
+}
+.select .head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.select h1{
+    color: #a200ff;
+}
+.select .mission{
+    text-align: center;
+    color: #a200ff;
+}
+.select .choose{
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.select .choose p{
+    font-size: 0.9rem;
+}
+.select .choose .choice{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: #eee;
+    border-radius: 15px;
+}
+.choose .choice .field label{
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding-left: 30px;
+    align-items: center;
+}
+.choose .choice .field input{
+    display: none;
+}
+.choose .choice .field .radio{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #3700ff;
+    display: flex;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+.choose .choice .field .radio::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #3700ff;
+    transform: scale(0);
+    transition: 0.3s ease-in-out;
+}
+.choose .choice .field input:checked ~ .radio:after{
+    transform: scale(1);
+}
+#select-con{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    background: #3700ff;
+    color: #fff;
+    transition: 0.5s;
+}
+#select-con:hover{
+    background: #2700b3;
+}
+
+/***********************EMAIL DETAILS*****************/
+.email-details{
+    display: none;/*TO FLEX*/
+    flex-direction: column;
+    gap: 100px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px #5555,
+                -1px -1px 15px #5555;
+}
+.email-details .head{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.email-details .head h1{
+    color: #a200ff;
+}
+.email-details .head p{
+    color: #a200ff;
+    text-align: center;
+}
+.email-details .sec{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.email-details .sec .field{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.email-details .sec .field input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+    background: #3700ff;
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.email-details .sec .field input:not(#email):hover{
+    background: #2700b3;
+}
+.email-details .sec .field label{
+    color: #2700b3;
+}
+.email-details .sec .field .inp{
+    display: flex;
+}
+.email-details .sec .field .inp input:nth-child(1){
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.email-details .sec .field .inp input:nth-child(2){
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    font-weight: 500;
+}
+.email-details .sec .field #email{
+    width: 100%;
+    background: #eee;
+    color: #2700b3;
+    caret-color: #3700ff;
+    font-weight: 500;
+}
+#submit-email{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#submit-email input{
+    width: 100%;
+}
+#submit-email input:nth-child(1){
+    background: #fff;
+    border: 1px solid #3700ff;
+    color: #3700ff;
+}
+#submit-email input:nth-child(1):hover{
+    color: #fff;
+    border: 1px solid transparent;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "2fa",
+  "version": "1.0.0",
+  "description": "A two step authentication app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www"
+  },
+  "author": "Agugoesi Miracle",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "mongoose": "^8.1.3",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.9",
+    "otp-generator": "^4.0.1",
+    "pug": "^3.0.2",
+    "qrcode": "^1.5.3",
+    "socket.io": "^4.7.4",
+    "speakeasy": "^2.0.0",
+    "uuid": "^9.0.1"
+  }
+}
